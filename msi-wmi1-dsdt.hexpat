@@ -1,11 +1,12 @@
-#include <std/core.pat>
-#include <std/io.pat>
-#include <std/mem.pat>
+import std.core;
+import std.io;
+import std.mem;
 
 /*------------------------------NOTE------------------------------*/
 /*
     https://github.com/glpnk/hexpats
 
+    + this pattern require ImHex release v1.33 or newer stable for comfortable usage
 */
 /*-----------------------------TOGGLE-----------------------------*/
 

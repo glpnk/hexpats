@@ -1,13 +1,13 @@
-#include <std/core.pat>
-#include <std/io.pat>
-#include <std/mem.pat>
+import std.core;
+import std.io;
+import std.mem;
 
 /*------------------------------NOTE------------------------------*/
 /*
     https://github.com/glpnk/hexpats
 
     + this pattern include rework of https://github.com/ThePBone/msi-ec-modern/blob/master/msi_modern_15_a11m_ec.hexpat
-    + this pattern require nightly ImHex release v1.32.2 or newer stable for comfort usage
+    + this pattern require ImHex release v1.33 or newer stable for comfortable usage
 
     + SCM block is mapped, but not used, values is directly RW by address
 
