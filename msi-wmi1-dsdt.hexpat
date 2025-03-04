@@ -45,18 +45,18 @@ struct Toggle<Type, auto Name, auto Hidden>
 bitfield  x2C {
         HSTT    : 1;
         padding : 7;
-} [[bitfield_order(std::core::BitfieldOrder::MostToLeastSignificant, 8), inline]];
+} [[bitfield_order(std::core::BitfieldOrder::LeastToMostSignificant, 8), inline]];
 
 bitfield  x2E {
         padding : 6;
         PXCT : 1;
-} [[bitfield_order(std::core::BitfieldOrder::MostToLeastSignificant, 8), inline]];
+} [[bitfield_order(std::core::BitfieldOrder::LeastToMostSignificant, 8), inline]];
 
 bitfield  x30 {
         POWS : 1;
         LIDS : 1;
         KBCS : 1;
-} [[bitfield_order(std::core::BitfieldOrder::MostToLeastSignificant, 8), inline]];
+} [[bitfield_order(std::core::BitfieldOrder::LeastToMostSignificant, 8), inline]];
 
 bitfield  x31 {
         MBTS : 1;
@@ -67,17 +67,17 @@ bitfield  x31 {
         MBLS : 1;
         MBCL : 1;
         MBFL : 1;
-} [[bitfield_order(std::core::BitfieldOrder::MostToLeastSignificant, 8), inline]];
+} [[bitfield_order(std::core::BitfieldOrder::LeastToMostSignificant, 8), inline]];
 
 bitfield  x34 {
         padding : 4;
         OSVR    : 4;
-} [[bitfield_order(std::core::BitfieldOrder::MostToLeastSignificant, 8), inline]];
+} [[bitfield_order(std::core::BitfieldOrder::LeastToMostSignificant, 8), inline]];
 
 bitfield  x7E {
         RES1 : 3;
         CHET : 1;
-} [[bitfield_order(std::core::BitfieldOrder::MostToLeastSignificant, 8), inline]];
+} [[bitfield_order(std::core::BitfieldOrder::LeastToMostSignificant, 8), inline]];
 
 bitfield  xBE {
         EC6I : 1;
@@ -86,27 +86,27 @@ bitfield  xBE {
         ESGI : 1;
         ESGO : 1;
         ESGN : 1;
-} [[bitfield_order(std::core::BitfieldOrder::MostToLeastSignificant, 8), inline]];
+} [[bitfield_order(std::core::BitfieldOrder::LeastToMostSignificant, 8), inline]];
 
 bitfield  xBF {
         RECY : 1;
         RSUS : 1;
-} [[bitfield_order(std::core::BitfieldOrder::MostToLeastSignificant, 8), inline]];
+} [[bitfield_order(std::core::BitfieldOrder::LeastToMostSignificant, 8), inline]];
 
 bitfield  xCF {
         ADP     : 1;
         padding : 1;
         CHG     : 1;
-} [[bitfield_order(std::core::BitfieldOrder::MostToLeastSignificant, 8), inline]];
+} [[bitfield_order(std::core::BitfieldOrder::LeastToMostSignificant, 8), inline]];
 
 bitfield  xD5 {
         PSNM : 7;
-} [[bitfield_order(std::core::BitfieldOrder::MostToLeastSignificant, 8), inline]];
+} [[bitfield_order(std::core::BitfieldOrder::LeastToMostSignificant, 8), inline]];
 
 bitfield  xE4 {
         padding : 1;
         TURB    : 1;
-} [[bitfield_order(std::core::BitfieldOrder::MostToLeastSignificant, 8), inline]];
+} [[bitfield_order(std::core::BitfieldOrder::LeastToMostSignificant, 8), inline]];
 
 
 struct EC {
@@ -219,12 +219,12 @@ bitfield  T2D {
         T2D0 : 1;
         T2D1 : 4;
         T2D5 : 3;
-} [[bitfield_order(std::core::BitfieldOrder::MostToLeastSignificant, 8), inline]];
+} [[bitfield_order(std::core::BitfieldOrder::LeastToMostSignificant, 8), inline]];
 
 bitfield  TE4 {
         TE40 : 3;
         TE43 : 5;
-} [[bitfield_order(std::core::BitfieldOrder::MostToLeastSignificant, 8), inline]];
+} [[bitfield_order(std::core::BitfieldOrder::LeastToMostSignificant, 8), inline]];
 
 
 struct SCM {
@@ -381,7 +381,7 @@ bitfield  xF4 {
         SLFG    : 1;
         padding : 3; // or unnamed
         SLEN    : 1;
-} [[bitfield_order(std::core::BitfieldOrder::MostToLeastSignificant, 8), inline]];
+} [[bitfield_order(std::core::BitfieldOrder::LeastToMostSignificant, 8), inline]];
 
 // 0xFC000800; SystemMemory scope
 struct ECS {
@@ -408,28 +408,28 @@ Toggle<ECS, "ECS", show_ECS> ECS @ 0x00; // [Not] EC but has same offset like in
 bitfield  T2D0 {
         T2D0    : 1;
         padding : 7;
-} [[bitfield_order(std::core::BitfieldOrder::MostToLeastSignificant, 8), inline]];
+} [[bitfield_order(std::core::BitfieldOrder::LeastToMostSignificant, 8), inline]];
 
 bitfield  T2D1 {
         padding : 1;
         T2D1    : 4;
         padding : 3;
-} [[bitfield_order(std::core::BitfieldOrder::MostToLeastSignificant, 8), inline]];
+} [[bitfield_order(std::core::BitfieldOrder::LeastToMostSignificant, 8), inline]];
 
 bitfield  T2D5 {
         padding : 5;
         T2D5 : 3;
-} [[bitfield_order(std::core::BitfieldOrder::MostToLeastSignificant, 8), inline]];
+} [[bitfield_order(std::core::BitfieldOrder::LeastToMostSignificant, 8), inline]];
 
 bitfield  TE40 {
         TE40    : 3;
         padding : 5;
-} [[bitfield_order(std::core::BitfieldOrder::MostToLeastSignificant, 8), inline]];
+} [[bitfield_order(std::core::BitfieldOrder::LeastToMostSignificant, 8), inline]];
 
 bitfield  TE43 {
         padding : 3;
         TE43    : 5;
-} [[bitfield_order(std::core::BitfieldOrder::MostToLeastSignificant, 8), inline]];
+} [[bitfield_order(std::core::BitfieldOrder::LeastToMostSignificant, 8), inline]];
 
 
 /*----------------------------SOFTWARE----------------------------*/
